@@ -1,76 +1,63 @@
 ﻿using System;
-using lb1.creational;
-using lb1.structural;
+using lb3.behavioral;
 
-namespace lb1
+namespace lb3
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Налаштування для коректного відображення української мови
             Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.WriteLine("=== ЛАБОРАТОРНА РОБОТА №3: ПОВЕДІНКОВІ ПАТЕРНИ ===\n");
 
-            //lb1
-            Console.WriteLine("=== ЛАБОРАТОРНА РОБОТА №1: ПОРОДЖУВАЛЬНІ ПАТЕРНИ ===\n");
+            // 1. Chain of Responsibility
+            var fuel = new FuelHandler();
+            fuel.Handle("FuelOK");
+            Console.WriteLine("1. Chain: Перевірка пройдена.");
 
-            GarageManager.Instance.ShowStatus();
-            var creationalFactory = new CarPartFactory();
-            Console.WriteLine($"Factory: {creationalFactory.CreatePart("wheel")}");
-            EngineFactory engFactory = new SportEngineFactory();
-            Console.WriteLine($"Factory Method: {engFactory.CreateEngine().GetPower()}");
-            IStyleFactory creationalInterior = new MPerformanceFactory();
-            Console.WriteLine($"Abstract Factory: {creationalInterior.CreateSeat().GetMaterial()}, {creationalInterior.CreateDashboard().GetStyle()}");
-            var builderCar = new CarConfigurator.Builder().SetModel("X6 F16").SetColor("Donington Grey").EnableShadowLine().Build();
-            Console.WriteLine($"Builder: {builderCar.Model}, колір: {builderCar.Color}");
-            var stage1 = new TuningStage { Stage = 1 };
-            var stage2 = (TuningStage)stage1.Clone();
-            stage2.Stage = 2;
-            Console.WriteLine($"Prototype: Клоновано з Stage {stage1.Stage} у Stage {stage2.Stage}");
+            // 2. Command
+            ICommand beep = new BeepCommand();
+            beep.Execute();
 
-            Console.WriteLine("\n" + new string('=', 50) + "\n");
+            // 3. Iterator
+            var history = new ServiceHistory();
+            Console.Write("3. Iterator (Сервіс): ");
+            foreach (var rec in history.GetRecords()) Console.Write($"{rec} | ");
+            Console.WriteLine();
 
-            //lb2
-            Console.WriteLine("=== ЛАБОРАТОРНА РОБОТА №2: СТРУКТУРНІ ПАТЕРНИ ===\n");
+            // 4. Mediator
+            var med = new CarMediator();
+            med.Notify("Obstacle");
 
-            // 1. Adapter
-            INewDiagnostic diagnostic = new DiagnosticAdapter(new OldDiagnostic());
-            Console.WriteLine($"Adapter: {diagnostic.GetData()}");
+            // 5. Memento
+            var seat = new Seat { Position = "Memory 1: Dmytro" };
+            var saved = seat.Save();
+            seat.Position = "Memory 2: Guest";
+            seat.Restore(saved);
+            Console.WriteLine($"5. Memento: Повернуто позицію: {seat.Position}");
 
-            // 2. Bridge
-            CarRemote remote = new BmwRemote(new AppControl());
-            Console.WriteLine($"Bridge: {remote.PressButton()}");
+            // 6. Observer
+            var sensor = new TyreSensor();
+            sensor.OnLowPressure += (msg) => Console.WriteLine($"6. Observer: {msg}");
+            sensor.Check();
 
-            // 3. Composite
-            var engineBlock = new Assembly();
-            engineBlock.Add(new Detail("Поршні"));
-            engineBlock.Add(new Detail("Колінвал"));
-            var fullCar = new Assembly();
-            fullCar.Add(engineBlock);
-            fullCar.Add(new Detail("Кузов X5"));
-            Console.WriteLine("Composite (Структура вузлів авто):");
-            fullCar.Show(0);
+            // 7. State
+            IGearState gear = new ParkingState();
+            gear.Shift();
 
-            // 4. Decorator
-            ICar tunedCar = new MPackageDecorator(new BasicCar());
-            Console.WriteLine($"Decorator: {tunedCar.GetInfo()}");
+            // 8. Strategy
+            IDriveStrategy mode = new SportStrategy();
+            mode.Drive();
 
-            // 5. Facade
-            Console.WriteLine("Facade (Запуск систем однією командою):");
-            new CarFacade().ReadyToGo();
+            // 9. Template Method
+            CarWash wash = new PremiumWash();
+            wash.Wash();
 
-            // 6. Flyweight
-            var sharedInfo = new CarModelType { Model = "M5", Color = "Marina Bay Blue" };
-            new CarOnMap { X = 10, Type = sharedInfo }.Display();
-            new CarOnMap { X = 55, Type = sharedInfo }.Display();
+            // 10. Visitor
+            var engine = new Engine();
+            engine.Accept(new DiagnosticVisitor());
 
-            // 7. Proxy
-            Console.WriteLine("Proxy (Перевірка доступу до ЕБК):");
-            Console.WriteLine($"Спроба 1: {new EcuProxy("wrong_password").Request()}");
-            Console.WriteLine($"Спроба 2: {new EcuProxy("bmw_admin").Request()}");
-
-            Console.WriteLine("\n--- Всі патерни виконано успішно ---");
-            Console.WriteLine("Натисніть будь-яку клавішу для виходу...");
+            Console.WriteLine("\n--- Всі 10 поведінкових патернів активовано ---");
             Console.ReadKey();
         }
     }
