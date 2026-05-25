@@ -1,0 +1,9 @@
+﻿*.sln
+lb2/
+lb3/
+lb5/
+.vs/
+bin/
+obj/
+*.user
+*.lock.json
