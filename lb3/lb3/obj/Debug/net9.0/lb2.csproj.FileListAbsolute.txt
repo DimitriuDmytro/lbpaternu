@@ -1,0 +1,14 @@
+D:\paternu lb\lb2\lb2\bin\Debug\net9.0\lb2.exe
+D:\paternu lb\lb2\lb2\bin\Debug\net9.0\lb2.deps.json
+D:\paternu lb\lb2\lb2\bin\Debug\net9.0\lb2.runtimeconfig.json
+D:\paternu lb\lb2\lb2\bin\Debug\net9.0\lb2.dll
+D:\paternu lb\lb2\lb2\bin\Debug\net9.0\lb2.pdb
+D:\paternu lb\lb2\lb2\obj\Debug\net9.0\lb2.GeneratedMSBuildEditorConfig.editorconfig
+D:\paternu lb\lb2\lb2\obj\Debug\net9.0\lb2.AssemblyInfoInputs.cache
+D:\paternu lb\lb2\lb2\obj\Debug\net9.0\lb2.AssemblyInfo.cs
+D:\paternu lb\lb2\lb2\obj\Debug\net9.0\lb2.csproj.CoreCompileInputs.cache
+D:\paternu lb\lb2\lb2\obj\Debug\net9.0\lb2.dll
+D:\paternu lb\lb2\lb2\obj\Debug\net9.0\refint\lb2.dll
+D:\paternu lb\lb2\lb2\obj\Debug\net9.0\lb2.pdb
+D:\paternu lb\lb2\lb2\obj\Debug\net9.0\lb2.genruntimeconfig.cache
+D:\paternu lb\lb2\lb2\obj\Debug\net9.0\ref\lb2.dll

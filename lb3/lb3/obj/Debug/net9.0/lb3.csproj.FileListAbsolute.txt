@@ -1,0 +1,15 @@
+D:\paternu lb\lb3\lb3\bin\Debug\net9.0\lb3.exe
+D:\paternu lb\lb3\lb3\bin\Debug\net9.0\lb3.deps.json
+D:\paternu lb\lb3\lb3\bin\Debug\net9.0\lb3.runtimeconfig.json
+D:\paternu lb\lb3\lb3\bin\Debug\net9.0\lb3.dll
+D:\paternu lb\lb3\lb3\bin\Debug\net9.0\lb3.pdb
+D:\paternu lb\lb3\lb3\obj\Debug\net9.0\lb3.GeneratedMSBuildEditorConfig.editorconfig
+D:\paternu lb\lb3\lb3\obj\Debug\net9.0\lb3.AssemblyInfoInputs.cache
+D:\paternu lb\lb3\lb3\obj\Debug\net9.0\lb3.AssemblyInfo.cs
+D:\paternu lb\lb3\lb3\obj\Debug\net9.0\lb3.csproj.CoreCompileInputs.cache
+D:\paternu lb\lb3\lb3\obj\Debug\net9.0\lb3.sourcelink.json
+D:\paternu lb\lb3\lb3\obj\Debug\net9.0\lb3.dll
+D:\paternu lb\lb3\lb3\obj\Debug\net9.0\refint\lb3.dll
+D:\paternu lb\lb3\lb3\obj\Debug\net9.0\lb3.pdb
+D:\paternu lb\lb3\lb3\obj\Debug\net9.0\lb3.genruntimeconfig.cache
+D:\paternu lb\lb3\lb3\obj\Debug\net9.0\ref\lb3.dll
