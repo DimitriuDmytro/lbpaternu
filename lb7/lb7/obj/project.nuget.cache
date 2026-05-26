@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Hx2kUkb1bBo=",
+  "success": true,
+  "projectFilePath": "D:\\paternu lb\\lb7\\lb7\\lb7.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\playp\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.8\\microsoft.extensions.dependencyinjection.10.0.8.nupkg.sha512",
+    "C:\\Users\\playp\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.8\\microsoft.extensions.dependencyinjection.abstractions.10.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}
